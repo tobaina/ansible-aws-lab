@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+#SPDX-License-Identifier: MIT-0
+---
+=======
+---
+- name: Install httpd
+  ansible.builtin.yum:
+    name: httpd
+    state: present
+
+- name: Start and enable httpd service
+  ansible.builtin.service:
+    name: httpd
+    state: started
+    enabled: true
+
+- name: Deploy custom index.html
+  ansible.builtin.copy:
+    dest: /var/www/html/index.html
+    content: |
+      <html>
+      <head><title>Welcome</title></head>
+      <body>
+        <h1>Deployed via Ansible Role 🚀</h1>
+      </body>
+      </html>
+>>>>>>> 4f39b57 (Initial commit from EC2 with full Ansible project)
+# tasks file for roles/web

@@ -1,0 +1,10 @@
+- name: Deploy Angular app placeholder
+  ansible.builtin.copy:
+    dest: /var/www/html/index.html
+    content: |
+      <html>
+      <body>
+        <h1>This is an Angular App placeholder</h1>
+      </body>
+      </html>
+

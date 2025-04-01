@@ -1,0 +1,29 @@
+<<<<<<< HEAD
+#SPDX-License-Identifier: MIT-0
+---
+=======
+---
+- name: Install httpd
+  ansible.builtin.yum:
+    name: httpd
+    state: present
+
+- name: Start and enable httpd
+  ansible.builtin.service:
+    name: httpd
+    state: started
+    enabled: true
+
+- name: Deploy maintenance page
+  ansible.builtin.copy:
+    dest: /var/www/html/index.html
+    content: |
+      <html>
+      <head><title>Maintenance</title></head>
+      <body style="text-align: center; padding-top: 50px;">
+        <h1>🚧 Site Under Maintenance 🚧</h1>
+        <p>Please check back later.</p>
+      </body>
+      </html>
+>>>>>>> 4f39b57 (Initial commit from EC2 with full Ansible project)
+# tasks file for roles/maintenance

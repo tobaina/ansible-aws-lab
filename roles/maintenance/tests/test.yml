@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+#SPDX-License-Identifier: MIT-0
+=======
+>>>>>>> 4f39b57 (Initial commit from EC2 with full Ansible project)
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - roles/maintenance

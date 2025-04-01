@@ -1,0 +1,13 @@
+- name: Install PHP and dependencies
+  ansible.builtin.yum:
+    name:
+      - php
+      - php-cli
+      - php-mysqlnd
+    state: present
+
+- name: Restart Apache after PHP install
+  ansible.builtin.service:
+    name: httpd
+    state: restarted
+

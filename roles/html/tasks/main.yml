@@ -1,0 +1,11 @@
+---
+- name: Deploy static HTML page using template
+  ansible.builtin.template:
+    src: static.html
+    dest: /var/www/html/index.html
+
+- name: Deploy dynamic page using Jinja2 template
+  ansible.builtin.template:
+    src: dynamic.j2
+    dest: /var/www/html/index_dynamic.html
+

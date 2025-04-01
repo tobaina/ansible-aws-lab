@@ -1,0 +1,9 @@
+---
+- name: Deploy Web App
+  hosts: localhost
+  become: yes
+
+  roles:
+    - apache
+    - html
+...
