@@ -1,0 +1,19 @@
+---
+- name: Ubuntu specific task
+  hosts: ubuntu
+  become: yes
+  tasks:
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+
+- name: Amazon Linux task
+  hosts: amazon
+  become: yes
+  tasks:
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: present
+

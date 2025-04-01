@@ -1,0 +1,12 @@
+---
+- name: Using variables
+  hosts: web
+  become: yes
+  vars:
+    welcome_message: "Hello from Variables"
+  tasks:
+    - name: Display welcome message
+      copy:
+        content: "{{ welcome_message }}"
+        dest: /var/www/html/index.html
+

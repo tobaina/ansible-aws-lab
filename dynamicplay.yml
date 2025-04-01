@@ -1,0 +1,12 @@
+---
+- name: Serve dynamic content
+  hosts: web
+  become: yes
+  vars:
+    dynamic_var: "Dynamic Value from Ansible"
+  tasks:
+    - name: Copy dynamic template
+      template:
+        src: dynamicstatic.j2
+        dest: /var/www/html/index.html
+

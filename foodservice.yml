@@ -1,0 +1,10 @@
+---
+- name: Food Service App
+  hosts: web
+  become: yes
+  tasks:
+    - name: Copy Food HTML
+      copy:
+        content: "<html><body><h1>Food Service Online</h1></body></html>"
+        dest: /var/www/html/index.html
+

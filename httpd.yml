@@ -1,0 +1,10 @@
+---
+- name: Install httpd
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install Apache on Amazon Linux
+      yum:
+        name: httpd
+        state: present
+

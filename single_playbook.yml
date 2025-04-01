@@ -1,0 +1,10 @@
+---
+- name: One-Task Apache
+  hosts: web
+  become: yes
+  tasks:
+    - name: Install Apache
+      yum:
+        name: httpd
+        state: present
+

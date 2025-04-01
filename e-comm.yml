@@ -1,0 +1,10 @@
+---
+- name: Deploy E-Commerce Web Page
+  hosts: web
+  become: yes
+  tasks:
+    - name: Deploy E-Comm HTML
+      copy:
+        content: "<html><body><h1>Welcome to E-Comm</h1></body></html>"
+        dest: /var/www/html/index.html
+

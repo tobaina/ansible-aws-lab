@@ -1,0 +1,10 @@
+---
+- name: Static Page Setup
+  hosts: web
+  become: yes
+  tasks:
+    - name: Copy Static HTML
+      copy:
+        src: static.html
+        dest: /var/www/html/index.html
+

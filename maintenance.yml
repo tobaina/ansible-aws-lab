@@ -1,0 +1,10 @@
+---
+- name: Maintenance Page
+  hosts: web
+  become: yes
+  tasks:
+    - name: Copy Maintenance HTML
+      copy:
+        src: WebMaintenance.html
+        dest: /var/www/html/index.html
+
